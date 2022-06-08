@@ -3,7 +3,7 @@ const fakeBodySteps = 1000
 
 const trackedKeys = ["size", "color", "fireStrength", "rotation", "position", "paritype", "displayName", "label", "labelWidth"]
 
-const avatars = ["bananya_birbo", "shiba", "marshmallow_hat_guy", "takodachi_rigged_hololive"]
+const avatars = ["bananya_birbo", "shiba", "marshmallow_hat_guy"]
 const avatarsPara = {
 	bananya_birbo: {
 		scale: "1 1 1",
@@ -117,24 +117,24 @@ Vue.component("obj-fire", {
 			position="0 -.4 0"
 			>
 		</a-sphere>
-		<a-cone
-			position="0 .2 0"
+		<a-sphere
+			position="12.1 5.2 -3.6"
 			@click="click"
 			:animation="heightAnimation"
 			:color="obj.color.toHex()"
 			height=.2
 			radius-bottom=".2"
 
-			:scale="(obj.fireStrength*.2 + 1) + ' ' + .1*obj.fireStrength + ' ' + (obj.fireStrength*.2 + 1)"
+			:radius=".5*obj.fireStrength"
 			:material="fireMaterial">
 
-		</a-cone>
+		</a-sphere>
 
 		<a-light
 			:animation="intensityAnimation"
 
-			position="0 1 0"
-			intensity="2"
+			position="12.1 5.2 -3.6"
+			intensity="100"
 			:color="obj.color.toHex()"
 			type="point"
 			:distance="obj.fireStrength*4 + 10"

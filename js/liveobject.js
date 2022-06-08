@@ -12,9 +12,9 @@ Vue.component("live-object", {
 		<a-text 
 			v-if="obj.label && !isUser"
 			:value="obj.label"
-			:width="obj.labelWidth || 1"
+			:width="obj.labelWidth * 10 || 10"
 			:color="obj.labelColor||obj.labelColor||'black'"
-			:position="obj.position.toAFrame(0,.2 + (obj.size.y||obj.size),0)"
+			:position="obj.position.toAFrame(0,.2 + (obj.size.y||obj.size) + 2.0,0)"
 			:rotation="obj.cameraFacing.rotation.toAFrame()"
 			>
 		</a-text>
