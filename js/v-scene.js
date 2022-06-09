@@ -86,7 +86,7 @@ Vue.component("room-scene", {
       
       	<a-gltf-model src="#valentines_day_confession_scene" scale="1.5 1.5 1.5" rotation="0 0 0" position="0 -4 0" ></a-gltf-model>
 		<a-gltf-model id="music" src="#psyduck_kfc_toy" scale="0.1 0.1 0.1" rotation="0 0 0" position="5 0.2 5" @click="click" sound="src: url(music/BGM.wav); autoplay: true; loop: true"></a-gltf-model>
-      	<a-gltf-model src="#cat_dispenser" scale="1 1 1" rotation="0 0 0" position="5 2.5 12"></a-gltf-model>
+      	<a-gltf-model src="#cat_dispenser" scale="1 1 1" rotation="0 0 0" position="-9 2.5 12"></a-gltf-model>
 
 		
       	<a-gltf-model src="#takodachi_rigged_hololive" scale=".1 .1 .1" rotation="0 180 0" position="3 2 15" animation-mixer></a-gltf-model>

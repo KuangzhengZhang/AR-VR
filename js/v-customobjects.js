@@ -134,12 +134,35 @@ Vue.component("obj-fire", {
 			:animation="intensityAnimation"
 
 			position="12.1 5.2 -3.6"
-			intensity="100"
+			intensity="1000"
 			:color="obj.color.toHex()"
 			type="point"
 			:distance="obj.fireStrength*4 + 10"
 			decay="2">
 		</a-light>
+
+		<a-sphere
+		    position="-6.2 2.5 -4.6"
+		    @click="click"
+		    :animation="heightAnimation"
+		    :color="obj.color.toHex()"
+		    height=.2
+		    radius-bottom=".2"
+    
+		    :radius=".5*obj.fireStrength"
+		    :material="fireMaterial">
+
+	    </a-sphere>
+
+	    <a-light
+		    :animation="intensityAnimation"
+		    position="-6.2 2.5 -4.6"
+		    intensity="1000"
+		    :color="obj.color.toHex()"
+		    type="point"
+		    :distance="obj.fireStrength*4 + 10"
+		    decay="2">
+	    </a-light>
 	</a-entity>
 
 	`,
@@ -211,7 +234,7 @@ Vue.component("obj-world", {
 			<a-entity id="directionaltarget" position="-10 0 -20"></a-entity>
 		</a-light>
 
-		<a-cone 
+		<!-- <a-cone 
 			v-for="(tree,index) in trees"
 			:key="'tree' + index"
 			shadow 
@@ -225,11 +248,11 @@ Vue.component("obj-world", {
 			
 			:rotation="tree.rotation.toAFrame()"
 			:position="tree.position.toAFrame()">
-		</a-cone>
+		</a-cone> -->
 
 		
 
-		<a-box 
+		<!-- <a-box 
 			v-for="(rock,index) in rocks"
 			:key="'rock' + index"
 			shadow 
@@ -243,7 +266,7 @@ Vue.component("obj-world", {
 			
 			:rotation="rock.rotation.toAFrame()"
 			:position="rock.position.toAFrame()">
-		</a-box>
+		</a-box> -->
 
 	</a-entity>
 		`,
